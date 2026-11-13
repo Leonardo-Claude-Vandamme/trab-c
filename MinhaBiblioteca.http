@@ -1,0 +1,34 @@
+@MinhaBiblioteca_HostAddress = http://localhost:5194
+
+### Listar materiais
+GET {{MinhaBiblioteca_HostAddress}}/api/materiais
+Accept: application/json
+
+### Buscar material por ID
+GET {{MinhaBiblioteca_HostAddress}}/api/materiais/1
+Accept: application/json
+
+### Cadastrar um livro
+POST {{MinhaBiblioteca_HostAddress}}/api/materiais
+Content-Type: application/json
+
+{
+  "tipo": "livro",
+  "titulo": "O lobo",
+  "autor": "Lobato",
+  "paginas": 67
+}
+
+### Atualizar material
+PUT {{MinhaBiblioteca_HostAddress}}/api/materiais/1
+Content-Type: application/json
+
+{
+  "tipo": "livro",
+  "titulo": "O lobo atualizado",
+  "autor": "Lobato",
+  "paginas": 70
+}
+
+### Remover material
+DELETE {{MinhaBiblioteca_HostAddress}}/api/materiais/1
